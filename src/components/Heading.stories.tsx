@@ -1,6 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { Heading, HeadingProps } from "./Heading";
-
 
 export default {
   title: "Components/Heading",
@@ -19,21 +18,21 @@ export default {
   },
 } as Meta<HeadingProps>;
 
-export const Default: StoryObj = {};
+export const Default: StoryObj<HeadingProps> = {};
 
-export const Small: StoryObj = {
+export const Small: StoryObj<HeadingProps> = {
   args: {
     size: "sm",
   },
 };
 
-export const Large: StoryObj = {
+export const Large: StoryObj<HeadingProps> = {
   args: {
     size: "lg",
   },
 };
 
-export const CustomComponent: StoryObj = {
+export const CustomComponent: StoryObj<HeadingProps> = {
   args: {
     asChild: true,
     children: <h1>Heading 1</h1>,
