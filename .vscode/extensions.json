@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "wix.vscode-import-cost",
+    "aaron-bond.better-comments",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-close-tag",
+    "vincaslt.highlight-matching-tag",
+    "csstools.postcss",
+    "bradlc.vscode-tailwindcss",
+
+  ]
+}
