@@ -1,10 +1,10 @@
-import React from "react";
+import {ReactNode} from "react";
 import { clsx } from "clsx";
 import { Slot } from "@radix-ui/react-slot";
 
 export interface TextProps {
   size?: "sm" | "md" | "lg";
-  children: React.ReactNode;
+  children: ReactNode;
   asChild?: boolean;
 }
 
