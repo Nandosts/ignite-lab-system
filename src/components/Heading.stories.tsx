@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Text, TextProps } from "./Text";
+import { Heading, HeadingProps } from "./Heading";
 import React from "react";
 
 export default {
-  title: "Components/Text",
-  component: Text,
+  title: "Components/Heading",
+  component: Heading,
   args: {
     children: "Lorem Ipsum",
     size: "md",
@@ -17,7 +17,7 @@ export default {
       },
     },
   },
-} as Meta<TextProps>;
+} as Meta<HeadingProps>;
 
 export const Default: StoryObj = {};
 
@@ -36,7 +36,7 @@ export const Large: StoryObj = {
 export const CustomComponent: StoryObj = {
   args: {
     asChild: true,
-    children: <p>Paragrafo Customizado</p>,
+    children: <h1>Heading 1</h1>,
   },
   argTypes: {
     children: {
