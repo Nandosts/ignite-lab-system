@@ -8,6 +8,6 @@
     "vincaslt.highlight-matching-tag",
     "csstools.postcss",
     "bradlc.vscode-tailwindcss",
-
+    "unifiedjs.vscode-mdx"
   ]
 }
