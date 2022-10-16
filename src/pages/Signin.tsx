@@ -15,14 +15,10 @@ export function SignIn() {
     event.preventDefault();
 
     // Rota falsa para funcionalidade de teste com MSW (mockServiceWorker)
-    await axios
-      .post("/sessions", {
-        email: "emailvalido@gmail.com",
-        password: "12345678",
-      })
-      .catch(() => {
-        console.error("Rota não existente, apenas para teste do storybook.");
-      });
+    await axios.post("/sessions", {
+      email: "emailvalido@gmail.com",
+      password: "12345678",
+    });
 
     setIsUserSignedIn(true);
   }
