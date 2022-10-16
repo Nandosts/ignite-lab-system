@@ -1,5 +1,6 @@
-import { Envelope, Lock } from "phosphor-react";
 import { FormEvent, useState } from "react";
+import { Envelope, Lock } from "phosphor-react";
+import axios from "axios";
 import { Button } from "../components/Button";
 import { Checkbox } from "../components/Checkbox";
 import { Heading } from "../components/Heading";
@@ -8,11 +9,22 @@ import { TextInput } from "../components/TextInput";
 import { Logo } from "../Logo";
 
 export function SignIn() {
-  const [isUserSignedIn, setIsUserSignedin] = useState(false);
+  const [isUserSignedIn, setIsUserSignedIn] = useState(false);
 
-  function handleSignIn(event: FormEvent) {
+  async function handleSignIn(event: FormEvent) {
     event.preventDefault();
-    setIsUserSignedin(true);
+
+    // Rota falsa para funcionalidade de teste com MSW (mockServiceWorker)
+    await axios
+      .post("/sessions", {
+        email: "emailvalido@gmail.com",
+        password: "12345678",
+      })
+      .catch(() => {
+        console.error("Rota não existente, apenas para teste do storybook.");
+      });
+
+    setIsUserSignedIn(true);
   }
 
   return (
